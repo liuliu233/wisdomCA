@@ -116,7 +116,39 @@
         {
           "title": "主页",
           "href": "",
-          "icon": "fa fa-superpowers",
+          "icon": "fa fa-home",
+          "target": "_self"
+        },
+        {
+          "title": "低保申报",
+          "href": "",
+          "icon": "fa fa-user",
+          "target": "_self",
+          "child": [
+            {
+              "title": "低保申报",
+              "href": "page/allowances/add.html",
+              "icon": "fa fa-plus-square-o",
+              "target": "_self"
+            },
+            {
+              "title": "申报记录",
+              "href": "page/allowances/record.html",
+              "icon": "fa fa-file-text-o",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "低保人员数量统计",
+          "href": "page/allowances/static.html",
+          "icon": "fa fa-info-circle",
+          "target": "_self"
+        },
+        {
+          "title": "意见反馈",
+          "href": "",
+          "icon": "fa fa-headphones",
           "target": "_self"
         }
       ]

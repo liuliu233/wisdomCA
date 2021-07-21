@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="../../lib/layui-v2.6.3/css/layui.css" media="all">
+        <link rel="stylesheet" href="../../lib/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+		<style type="text/css">
+			body,
+			html {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				font-family: "Microsoft YaHei"
+			}
+
+			#button {
+				width: 25px;
+				height: 60px;
+				border-radius: 1px;
+				z-index: 1000;
+				position: absolute;
+				left: 200px;
+				top: 50%;
+			}
+			.tzdl_table_style td{
+				/* border: 2px solid #6698cb; */
+				border: 1px solid #ccc;
+			}
+            tr {
+                font-weight: bolder;
+                font-size: larger;
+            }
+		</style>
+	</head>
+    <body class="layui-layout-body">
+        
+		<div style="margin-left: 10px; margin-right: 10px; border: 0px;">
+            <div class="layui-tab-content">
+                <!-- 申请低保 -->
+                <div class="layui-tab-item layui-show" id='dbdiv'>
+                    <table class="t2-table_fix tzdl_table_style" id='dbreport' cellspacing="0" cellpadding="0">
+                        <form class="layui-form" action="" id="dbDeclareForm">
+                            <tr>
+                                <td colspan="2" class=" common_label_title_r">姓名</td>
+                                <td colspan="3">
+                                    <!-- 要输入id和name两个属性才能向后台传输 -->
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="">
+                                </td>
+                                <td colspan="3" class="common_label_title_r">性别</td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="gender" name="gender" placeholder="">
+                                </td>
+                                <td colspan="2" class=" common_label_title_r">年龄</td>
+                                <td colspan="3">
+                                    <input type="text" class="form-control" id="age" name="age" placeholder="">
+                                </td>
+                                <td colspan="2" class="common_label_title_r">身体状况</td>
+                                <td colspan="3">
+                                    <input type="text" class="form-control" id="physicalCondition" name="physicalCondition" placeholder="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class=" common_label_title_r">家庭人口数</td>
+                                <td colspan="3">
+                                    <input type="text" class="form-control" id="houseHoldNum" name="houseHoldNum" placeholder="">
+                                </td>
+                                <td colspan="3" class="common_label_title_r">有劳动能力人数</td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="workNum" name="workNum" placeholder="">
+                                </td>
+                                <td colspan="2" class=" common_label_title_r">从事职业</td>
+                                <td colspan="3">
+                                    <input type="text" class="form-control" id="professional" name="professional" placeholder="">
+                                </td>
+                                <td colspan="2" class="common_label_title_r">平均月收入</td>
+                                <td colspan="3">
+                                    <input type="text" class="form-control" id="avgMouthlyIncome" name="avgMouthlyIncome" placeholder="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class=" common_label_title_r">户籍地</td>
+                                <td colspan="18">
+                                    <input type="text" class="form-control" id="domicile" name="domicile" placeholder="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class=" common_label_title_r">居住地</td>
+                                <td colspan="18">
+                                    <input type="text" class="form-control" id="toLive" name="toLive" placeholder="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class=" common_label_title_r">姓名</td>
+                                <td colspan="2" class="common_label_title_r">与户主关系</td>
+                                <td colspan="1" class="common_label_title_r">性别</td>
+                                <td colspan="2" class="common_label_title_r">健康状况</td>
+                                <td colspan="2" class="common_label_title_r">婚姻状况</td>
+                                <td colspan="2" class="common_label_title_r">从业情况</td>
+                                <td colspan="2" class="common_label_title_r">人员类别</td>
+                                <td colspan="2" class="common_label_title_r">收入类别</td>
+                                <td colspan="2" class="common_label_title_r">月纯收入</td>
+                                <td colspan="3" class="common_label_title_r">身份证号码</td>
+                            
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="name1" name="name1" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="relationship1" name="relationship1" placeholder="">
+                                </td>
+                                <td colspan="1">
+                                    <input type="text" class="form-control" id="gender1" name="gender1" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="heath1" name="heath1" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="marriage1" name="marriage1" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="employed1" name="employed1" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="personalCategory1" name="personalCategory1" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="incomeType1" name="incomeType1" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="monthIncome1" name="monthIncome1" placeholder="">
+                                </td>
+                                <td colspan="3">
+                                    <input type="text" class="form-control" id="IDCard1" name="IDCard1" placeholder="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="name2" name="name2" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="relationship2" name="relationship2" placeholder="">
+                                </td>
+                                <td colspan="1">
+                                    <input type="text" class="form-control" id="gender2" name="gender2" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="heath2" name="heath2" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="marriage2" name="marriage2" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="employed2" name="employed2" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="personalCategory2" name="personalCategory2" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="incomeType2" name="incomeType2" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="monthIncome2" name="monthIncome2" placeholder="">
+                                </td>
+                                <td colspan="3">
+                                    <input type="text" class="form-control" id="IDCard2" name="IDCard2" placeholder="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="name3" name="name3" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="relationship3" name="relationship3" placeholder="">
+                                </td>
+                                <td colspan="1">
+                                    <input type="text" class="form-control" id="gender3" name="gender3" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="heath3" name="heath3" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="marriage3" name="marriage3" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="employed3" name="employed3" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="personalCategory3" name="personalCategory3" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="incomeType3" name="incomeType3" placeholder="">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" id="monthIncome3" name="monthIncome3" placeholder="">
+                                </td>
+                                <td colspan="3">
+                                    <input type="text" class="form-control" id="IDCard3" name="IDCard3" placeholder="">
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td colspan="2" class=" common_label_title_r">住房类型</td>
+                                <td colspan="5">
+                                    <input type="text" class="form-control" id="houseType" name="houseType" placeholder="">
+                                </td>
+                                <td colspan="2" class="common_label_title_r">住房性质</td>
+                                <td colspan="5">
+                                    <input type="text" class="form-control" id="houseNature" name="houseNature" placeholder="">
+                                </td>
+                                <td colspan="2" class=" common_label_title_r">住房套数</td>
+                                <td colspan="4">
+                                    <input type="text" class="form-control" id="houseNum" name="houseNum" placeholder="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class=" common_label_title_r">家庭财产情况</td>
+                                <td colspan="18">
+                                    <input type="text" class="form-control" id="property" name="property" placeholder="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class=" common_label_title_r">申请救助原因</td>
+                                <td colspan="18">
+                                    <input type="text" class="form-control" id="reasons" name="reasons" placeholder="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class=" common_label_title_r">申请人签章</td>
+                                <td colspan="18">
+                                    <input type="text" class="form-control" id="dbapplySign" name="dbapplySign" placeholder="以上本人代表家庭所报告的情况均真实可靠,愿意接受相关部门调查.">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2" class="common_label_title_r" >服务对象</td>
+                                <td colspan="8">
+                                    <input type="text" class="form-control" placeholder="其他组织">										
+                                </td>
+                                <td colspan="2" class=" common_label_title_r">受理机构</td>
+                                <td colspan="8">
+                                    <input type="text" class="form-control" placeholder="洪湖市民政局">
+                                </td>
+                            </tr>
+                            
+                            <!-- 提交按钮要放在form表单内 -->
+                            <div id='ApplySubmit' style="margin: 10px">
+                                <button id="dbSubmitDeclare" type="button" class="layui-btn" style="background-color: #0085c3;">提交申请</button>
+                                <button id="dbDeclareWord" type="button" class="layui-btn" style="background-color: #0085c3; float:right">生成word文档</button>
+                            </div>
+                            
+                        </form>
+                    </table>
+                </div>
+            </div>
+        </div>
+		
+    </body>
+</html>
