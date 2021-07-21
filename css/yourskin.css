@@ -1,0 +1,231 @@
+.lg-map {
+	width: 100%;
+	height: calc(100vh);
+	font-family: sans-serif;
+	background: #ffffff;
+	opacity: 1.0;
+}
+.lg-boundary-map {
+	width: 100%;
+	height: calc(100vh);
+	font-family: sans-serif;
+	background: #ffffff;
+	opacity: 1.0;
+}
+.lg-aside {
+	height: calc(100vh);
+	border-left: 1px solid #f0f0f0;
+	opacity: 1.0;
+}
+
+/* Tooltip 容器 */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; /* 悬停元素上显示点线 */ */
+}
+ 
+/* Tooltip 文本 (底部显示) */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 60px;
+	top: 100%;
+	left: 50%;
+	margin-left: -30px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 3px;
+ 
+    /* 定位 */
+    position: absolute;
+    z-index: 1;
+}
+
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* 提示工具头部 */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+ 
+/* 鼠标移动上去后显示提示框 */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+.lg-select :hover {
+	background:#F8F8F8;
+}
+.lg-float-bar {
+	position: absolute;
+	top: 10px;
+	right: 25px;
+	z-index: 99999;
+}
+.lg-float-bar .lg-float-bar-item {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	border: 1px solid #CCC;
+	border-radius: 4px;
+	margin-top: 15px;
+	opacity: 0.9;
+}
+			
+
+.lg-popup {
+	position: relative;
+	display: inline-block;
+}
+/* 左侧显示 */
+.lg-popup .lg-popup-select {
+	visibility: hidden;
+	width: 120px;
+	background-color: #fff;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+	box-shadow: 0px 0px 6px 1px #F8F8F8;
+	opacity: 0.75;
+	 
+	/* 定位 */
+	position: absolute;
+	z-index: 1;
+	top: 15px;
+	right: 105%;
+}
+
+.lg-popup:hover .lg-popup-select {
+	visibility: visible;
+}
+
+.lg-popup-select .layui-form-radio {
+	margin-right: 0px;
+	padding-right: 0px !important;
+}
+
+.lg-popup-select .layui-form-checkbox {
+	margin-right: 0px;
+	padding-right: 30px !important;
+}
+
+/* .aside .lg-retract-icon {
+	visibility: hidden;
+	width: 20px;
+	height: 40px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 42px;
+	
+	position: absolute;
+	z-index: 99999;
+	top: 50%;
+	right: calc(100% - 5px)
+}
+.aside:hover .lg-retract-icon {
+	visibility: visible;
+}
+.aside:hover::before {
+	content: " ";
+	width: 20px;
+	height: 40px;
+	border-top: 1px solid #f0f0f0;
+	border-bottom: 1px solid #f0f0f0;
+	border-left: 1px solid #f0f0f0;
+	background-color: #ffffff;
+	opacity: 1.0;
+	text-align: center;
+	line-height: 42px;
+	border-radius: 25px 0 0 25px;
+	 
+	position: absolute;
+	z-index: 99999;
+	top: 50%;
+	left: -20px;
+} */
+
+.lg-icon {
+	font-size: 20px; 
+	font-weight: bold; 
+	color: #000000;
+}
+
+
+.lg-map .lg-retract-icon {
+	visibility: hidden;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	text-align: center;
+	background-color: #ffffff;
+	line-height: 42px;
+	border-radius: 42px;
+	opacity: 0.5;
+	
+	/* 定位 */
+	position: absolute;
+	z-index: 99999;
+	top: 50%;
+	right: 5px;
+}
+.lg-map .lg-retract-icon:hover {
+	background-color: #868686;
+}
+.lg-map .lg-retract-icon:hover .lg-icon {
+	background-color: #868686;
+	color: #FFFFFF;
+}
+.lg-map:hover .lg-retract-icon {
+	visibility: visible;
+}
+
+
+.lg-horizon-bar {
+	position: absolute;
+	left: 25px;
+	top: 25px;
+	z-index: 99999;
+	
+	width: 500px;
+	height: 40px;
+	background-color: #F8F8F8;
+	text-align: center;
+	border: 1px solid #9c9c9c;
+	border-radius: 5px;
+}
+.lg-horizon-bar .lg-form-select {
+	float: left;
+	
+}
+
+.lg-horizon-bar .lg-form-select .layui-form-item {
+	float: left;
+	width: 160px;
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	border-radius: 5px;
+}
+
+.lg-horizon-bar .lg-horizon-bar-item {
+	float: left;
+	width: 18px;
+	height: 18px;
+	margin-top: 11px;
+	margin-bottom: 11px;
+	margin-left: 5px;
+	margin-right: 5px;
+	cursor: pointer;
+	opacity: 0.8;
+}

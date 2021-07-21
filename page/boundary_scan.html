@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>地图主页</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+		<link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css" media="all">
+		<link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../css/public.css" media="all">
+		<link rel="stylesheet" href="../css/yourskin.css" media="all">
+		<link rel="stylesheet" href="../lib/ol-v6.5.0/ol.css" type="text/css">
+		<style>
+			html
+			body {
+				margin: 0px 0px 0px 0px;
+			}
+			.lg-float-bar-item {
+				height: 30px;
+				width: 30px;
+			}
+			.layui-select,.layui-input{
+				height:30px;
+			}
+			
+		</style>
+	</head>
+	<body style="overflow: scroll; overflow-y: hidden; overflow-x: hidden;">
+		<div class="layuimini-container">
+			<div class="layui-row">
+				<div id="gl-body" class="layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-lg12">
+					<div id="gl-boundary-map" class="lg-boundary-map">
+						<!-- <button type="button" id="sousuo" class="layui-btn">搜 索</button>
+						<button type="button" id="rt" class="layui-btn">复 原</button>
+						<button type="button" id="rt1" class="layui-btn">复 原</button> -->
+						<div class="lg-float-bar">
+							<div>
+								<div class="lg-popup">
+									<div id="gl-vectorgraph" class="lg-float-bar-item" data-value="矢量图" style="background: url(../images/my/pingmian_h.png) center no-repeat; background-color: #fff;"></div>
+									<div class="lg-popup-select">
+										<form class="layui-form" action="">
+											<div class="layui-form-item" style="color: #000000;">
+												<input type="checkbox" name="gl-boundary" lay-filter="gl-boundary" value="gl-shengshijie" title="省市界线">
+												<input type="checkbox" name="gl-boundary" lay-filter="gl-boundary" value="gl-xianjie" title="县界县&emsp;">
+												<input type="checkbox" name="gl-boundary" lay-filter="gl-boundary" value="gl-xiangjie" title="乡界县&emsp;">
+											</div>
+										</form>
+										
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="lg-popup">
+									<div id="gl-layerselect" class="lg-float-bar-item" data-value="图层选择" style="background: url(../images/my/yx_h.png) center no-repeat; background-color: #fff;"></div>
+									<div class="lg-popup-select">
+										<form class="layui-form" action="">
+											<div class="layui-form-item" style="color: #000000;">
+												<input type="radio" name="gl-maplayers" lay-filter="gl-maplayers" value="矢量地图" title="矢量地图" checked>
+												<input type="radio" name="gl-maplayers" lay-filter="gl-maplayers" value="影像地图" title="影像地图">
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div id="gl-zoomin" class="lg-float-bar-item" data-value="放大"style="background: url(../images/my/zoomin_h.png) center no-repeat; background-color: #fff;"></div>
+							<div id="gl-zoomout" class="lg-float-bar-item" data-value="缩小"style="background: url(../images/my/zoomout_h.png) center no-repeat; background-color: #fff;"></div>
+						</div>
+						<div class="lg-horizon-bar">
+							<img id="gl-select" class="lg-horizon-bar-item" style="margin-left: 10px !important;" data-value="unselected" src="../images/my/select.png"/>
+							<img id="gl-edit" class="lg-horizon-bar-item" data-value="unedited" src="../images/my/edit2.png"/>
+							<div class="lg-form-select">
+								<div class="layui-form">
+									<div class="layui-form-item">
+										<select id="forthClassModal" lay-filter="forthClass" data-value="龙岗区">
+											<option value="" checked>--请选择图层--</option>
+											<option value="点图层">点图层</option>
+											<option value="线图层">线图层</option>
+											<option value="面图层">面图层</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="lg-draw">
+								<img id="gl-draw" class="lg-horizon-bar-item" data-value="stop" src="../images/my/stop.png"/>
+								<img id="gl-point" class="lg-horizon-bar-item" data-value="undraw" src="../images/my/point.png"/>
+								<img id="gl-line" class="lg-horizon-bar-item" data-value="undraw" src="../images/my/line.png"/>
+								<img id="gl-polygon" class="lg-horizon-bar-item" data-value="undraw" src="../images/my/polygon.png"/>
+							</div>
+							<img id="gl-clear" class="lg-horizon-bar-item" src="../images/my/clear2.png"/>
+							<img id="gl-save" class="lg-horizon-bar-item" src="../images/my/save1.png"/>
+							<img id="gl-merge" class="lg-horizon-bar-item" src="../images/my/merge3.png"/>
+							<img id="gl-split" class="lg-horizon-bar-item" src="../images/my/split.png"/>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</body>
+	
+
+	
+	<script src="../lib/layui-v2.6.3//layui.js" charset="utf-8"></script>
+	<script src="../js/lay-config.js?v=1.0.4" charset="utf-8"></script>
+	<script src="../lib/jquery-3.4.1/jquery-3.4.1.min.js" charset="utf-8"></script>
+	<script src="../lib/ol-v6.5.0/ol.js"></script>
+	<script src="../js/boundary_scan.js"></script>
+</html>
